@@ -43,6 +43,10 @@
 \DefineVerbatimEnvironment{Scode}{Verbatim}{xleftmargin=2em}
 \fvset{listparameters={\setlength{\topsep}{0pt}}}
 \renewenvironment{Schunk}{\vspace{\topsep}}{\vspace{\topsep}}
+\hypersetup{
+    colorlinks=false,
+    pdfborder={0 0 0},
+}
 
 
 
@@ -57,7 +61,7 @@ options(continue=" ")
 
 
 \section{Introduction}
-The simple trapezoidal distribution is defined by minimum, lower mode, upper mode, and maximum parameters. The generalized trapezoidal distribution adds three more parameters: the growth rate, decay rate, and boundary ratio parameters. Van Dorp and Kotz\cite{VanDorp2003} and van Dorp and colleagues\cite{VanDorp2007} formally describe the generalized trapezoidal distribution, representing the minimum, lower mode, upper mode, maximum, growth rate, decay rate, and boundary ratio with parameters \begin{math}a, b, c, d, m, n, \text{ and } \alpha \end{math}, respectively. 
+The trapezoidal distribution is defined by minimum, lower mode, upper mode, and maximum parameters. The generalized trapezoidal distribution adds three more parameters: the growth rate, decay rate, and boundary ratio parameters. Van Dorp and Kotz\cite{VanDorp2003} and van Dorp and colleagues\cite{VanDorp2007} formally describe the generalized trapezoidal distribution, representing the minimum, lower mode, upper mode, maximum, growth rate, decay rate, and boundary ratio with parameters \begin{math}a, b, c, d, m, n, \text{ and } \alpha \end{math}, respectively. 
 
 The probability density function of the generalized trapezoidal distribution with parameters \begin{math}a, b, c, d, m, n, \text{ and } \alpha \end{math} is given by:
   \begin{displaymath}
@@ -85,53 +89,53 @@ The \Rpackage{trapezoid} package provides functions for the probability density 
 
 
 \section{Examples}
-\subsection{Simple trapezoid}
-The generalized trapezoidal distribution simplifies to the simple trapezoid distribution when \begin{math} m = n = 2 \text{ and } \alpha = 1\end{math}. 
+\subsection{Trapezoid}
+The generalized trapezoidal distribution simplifies to the trapezoidal distribution when \begin{math} m = n = 2 \text{ and } \alpha = 1\end{math}. 
 
-<<simpleTrapezoid, echo=TRUE, results=verbatim, fig=TRUE, include=FALSE>>=
+<<trapezoid, echo=TRUE, results=verbatim, fig=TRUE, include=FALSE>>=
 # ggplot2 is required for these examples
 require(trapezoid)
 require(ggplot2)
 
-# Simple trapezoid
+# Trapezoid
 x <- seq(from = 0, to = 1, by = 0.01)	
 density <- dtrapezoid(x, min = 0, mode1 = 1/3, mode2 = 2/3, max = 1,
 	n1 = 2, n3 = 2, alpha = 1)
-simpleTrapezoid <- ggplot(data = data.frame(x, density), 
+trapezoid <- ggplot(data = data.frame(x, density), 
 		aes(x = x, y = density)) + geom_line() + theme_bw()
-print(simpleTrapezoid)
+print(trapezoid)
 @
 \begin{figure}[H]
 \centering
-\caption{A simple trapezoidal distribution.}
-\includegraphics{trapezoid-simpleTrapezoid}
+\caption{A trapezoidal distribution.}
+\includegraphics{trapezoid-trapezoid}
 \end{figure}
 
 
 
-\subsection{Simple triangle}
-The simple trapezoidal distribution further simplifies to the simple triangular distribution when \begin{math} b = c\end{math}. 
+\subsection{Triangle}
+The trapezoidal distribution further simplifies to the triangular distribution when \begin{math} b = c\end{math}. 
 
-<<simpleTriangle, echo=TRUE, results=verbatim, fig=TRUE, include=FALSE>>=
-# Simple triangle
+<<triangle, echo=TRUE, results=verbatim, fig=TRUE, include=FALSE>>=
+# Triangle
 x <- seq(from = 0, to = 1, by = 0.01)	
 density <- dtrapezoid(x, min = 0, mode1 = 1/2, mode2 = 1/2, max = 1,
 	n1 = 2, n3 = 2, alpha = 1)
-simpleTriangle <- ggplot(data = data.frame(x, density), 
+triangle <- ggplot(data = data.frame(x, density), 
 				aes(x = x, y = density)) + geom_line() + theme_bw()
-print(simpleTriangle)
+print(triangle)
 @
 \begin{figure}[H]
 \centering
-\caption{A simple triangular distribution.}
-\includegraphics{trapezoid-simpleTriangle}
+\caption{A triangular distribution.}
+\includegraphics{trapezoid-triangle}
 \end{figure}
 
 
 \subsection{Generalized trapezoidal distribution}
 Parameters \begin{math}m, n, \text{ and } \alpha \end{math} control the growth rate, decay rate, and boundary ratio, respectively, of the distribution. In the \Rpackage{trapezoid} package, these parameters are controlled by the \Rcode{n1}, \Rcode{n3}, and \Rcode{alpha} arguments. To demonstrate the effects of these three parameters, van Dorp and Kotz\cite{VanDorp2003} generated eight distributions with varying parameter values. The distributions are approximately re-generated here.
 
-<<generalizedTrapezoids, echo=TRUE, results=verbatim, fig=TRUE, include=FALSE>>=
+<<generalizedTrapezoids, echo=TRUE, results=verbatim, fig=TRUE, include=FALSE, height=8>>=
 # Generalized trapezoidal distributions
 x <- seq(from = 0, to = 1, by = 0.01)	
 

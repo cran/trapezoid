@@ -1,7 +1,7 @@
 % Copyright 2011 Jeremy Thoms Hetzel
 % Distributed under GPL 3 or later\name{trapezoid}
 
-\name{Trapezoid}
+\name{trapezoid}
 \alias{Trapezoid}
 \alias{trapezoid}
 \alias{dtrapezoid}
@@ -17,10 +17,14 @@ equal to \samp{max}. For the generalized trapezoidal distribution, \samp{n1},
 \samp{n3}, and \samp{alpha} may optionally be specified.
 }
 \usage{
-dtrapezoid(x, min=0, mode1=1/3, mode2=2/3, max=1, n1=2, n3=2, alpha=1, log=FALSE)
-ptrapezoid(q, min=0, mode1=1/3, mode2=2/3, max=1, n1=2, n3=2, alpha=1, lower.tail=TRUE, log.p=FALSE)
-qtrapezoid(p, min=0, mode1=1/3, mode2=2/3, max=1, n1=2, n3=2, alpha=1, lower.tail=TRUE, log.p=FALSE)
-rtrapezoid(n, min=0, mode1=1/3, mode2=2/3, max=1, n1=2, n3=2, alpha=1)
+dtrapezoid(x, min = 0, mode1 = 1/3, mode2 = 2/3, max = 1, n1 = 2, n3 = 2, 
+           alpha = 1, log = FALSE)
+ptrapezoid(q, min = 0, mode1 = 1/3, mode2 = 2/3, max = 1, n1 = 2, n3 = 2, 
+           alpha = 1, lower.tail = TRUE, log.p = FALSE)
+qtrapezoid(p, min = 0, mode1 = 1/3, mode2 = 2/3, max = 1, n1 = 2, n3 = 2, 
+           alpha = 1, lower.tail = TRUE, log.p = FALSE)
+rtrapezoid(n, min = 0, mode1 = 1/3, mode2 = 2/3, max = 1, n1 = 2, n3 = 2, 
+           alpha = 1)
 }
 \arguments{
 \item{x,q}{vector of quantiles.}
@@ -49,7 +53,7 @@ The generalized trapezoidal distribution is described by van Dorp and Kotz (2003
  and van Dorp and colleagues (2007). 
  With \samp{n1}, \samp{n3}, and \samp{alpha} equal to the default values of 
 2, 2, and 1, respectively, the distribution shape is of a quadrilateral trapezoid.
-Altering \samp{n1}, \samp{n3}, or \samp{alpha} changes the growth, decay, and
+Altering \samp{n1}, \samp{n3}, or \samp{alpha} changes the growth rate, decay rate, and
 boundary ratio parameters, respectively, as demonstrated in the examples below.
 }
 \seealso{
