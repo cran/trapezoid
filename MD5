@@ -1,0 +1,12 @@
+540f858db76c70ec4636fe445b20abc6 *ChangeLog
+7e41c1d567977138ad7c511d29f72e8d *DESCRIPTION
+038a92a651209ad5cb06a1ba40cb1cd5 *NAMESPACE
+28073a2d5cc5b2e340823c838f6cf2bf *R/dtrapezoid.R
+5b3f02cf7209a34b40874adcec3d8e0e *R/ptrapezoid.R
+5d6f6f596db08e1332bd456387257e61 *R/qtrapezoid.R
+0e3f21ec860c98053e58033e4ce5ecc9 *R/rtrapezoid.R
+86768092e7bdc1a61448419cca73feff *build.R
+2211f9dea1f22349bcbbe5491fb9efb3 *inst/doc/trapezoid.Rnw
+50153832edab31bc1475ec578c9b5cfa *inst/doc/trapezoid.bib
+0c70ec6d79fd287d99089158a5b4fe64 *inst/doc/trapezoid.pdf
+43dfaca333aa7395320b7d4b4cf3054e *man/trapezoid.Rd
