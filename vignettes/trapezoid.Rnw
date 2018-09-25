@@ -67,7 +67,7 @@ The probability density function of the generalized trapezoidal distribution wit
   \begin{displaymath}
     f{\scriptscriptstyle X}(x\mid\theta) = \mathcal{C}(\Theta) \times
       \begin{cases}
-        \alpha \left(\frac{x - \alpha}{b - \alpha} \right)^{m - 1}, & \text{for } a \leq x < b \\
+        \alpha \left(\frac{x - a}{b - a} \right)^{m - 1}, & \text{for } a \leq x < b \\
         (1 - \alpha) \left(\frac{x - b}{c - b} \right) + \alpha, & \text{for } b \leq x < c \\
         \left(\frac{d - x}{d - c} \right)^{n-1}, & \text{for } c \leq x \leq d
        \end{cases}
